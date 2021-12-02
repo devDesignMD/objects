@@ -69,3 +69,22 @@ let admin = {
     },
     address: "Moldova"      
     }
+
+    Object.assign(admin,{phone: "+37312345678`"} )
+    delete admin.address
+    console.log(admin)
+
+    //6
+
+    let number =[1, 2, 3, 4, null, 4, 3, undefined]
+
+    Array.prototype.clean = function(deleteValue) {
+        for (var i = 0; i < this.length; i++) {
+          if (this[i] == deleteValue) {         
+            this.splice(i, 1);
+            i--;
+          }
+        }
+        return this;
+      };
+    console.log(number)
