@@ -70,21 +70,42 @@ let admin = {
     address: "Moldova"
 }
 
-Object.assign(admin, {phone: "+37312345678`"})
+Object.assign(admin, {phone: "+37312345678"})
 delete admin.address
 console.log(admin)
 
 //6
 
-let number = [1, 2, 3, 4, null, 4, 3, undefined]
+const wrongArr = [{x:1 ,y: 2}, {x:3, y:4}, {x:null, y:4}, {x:3, y:undefined}];
 
-Array.prototype.clean = function (deleteValue) {
-    for (var i = 0; i < this.length; i++) {
-        if (this[i] == deleteValue) {
-            this.splice(i, 1);
-            i--;
-        }
-    }
+console.log(wrongArr.filter(item => item.x && item.y));
 
-    console.log(number)
+//7
+
+let users = {
+    name: "Person",
+        age: 123,
+    salary: 1542.33,
+    contacts: {
+    phone: "112",
+        email: "email@domain.com"
+},
+    address: "Moldova"
+}
+
+
+
+
+//8
+
+const weekDays = {
+
+"Mo": "Понедельник",
+"Tu": "Вторник",
+"We": "Среда",
+"Th": "Четверг",
+"Fr": "Пятница",
+"Sa": "Суббота",
+"Su": "Воскресенье",
+
 }
